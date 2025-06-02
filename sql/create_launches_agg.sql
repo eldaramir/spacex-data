@@ -1,4 +1,4 @@
-CREATE TABLE launches_agg (
+CREATE TABLE spacex.public.launches_agg (
     id SERIAL PRIMARY KEY,
     total_launches INTEGER,
     successful_launches INTEGER,
