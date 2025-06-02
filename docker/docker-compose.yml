@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: pg
+    restart: always
+    environment:
+      POSTGRES_USER: spacex
+      POSTGRES_PASSWORD: spacex
+      POSTGRES_DB: spacex
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  trino:
+    image: trinodb/trino:latest
+    container_name: trino
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./trino/catalog:/etc/trino/catalog
+      - ./trino/config.properties:/etc/trino/config.properties
+      - ./trino/password.db:/etc/trino/password.db
+
+volumes:
+  pgdata:
