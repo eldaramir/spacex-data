@@ -31,14 +31,17 @@ I used DBeaver from the task description I created the tables in pg sql syntax
 or run the SQL in sql/create_tables.sql to create the launches_raw and launches_agg tables.
 
 4. Set up Python Virtual Environment
+Go back to cd /spacex-data and do the followings
 python -m venv .venv
 source .venv/bin/activate   # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
 Running the Pipeline
 
-cd src
+cd srcs
 1. python src/ingest_latest_launches.py
+For first time batch of all launches need to run line 85
+For latest launch need to run line 88
 
 2. python src/agg_launches.py
 
