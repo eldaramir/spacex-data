@@ -78,14 +78,11 @@ def main():
         password=DB_PASS
     )
 
-    # Choose which ingestion mode to run:
-    # Uncomment one of the two:
-
     # Run once to backfill historical data
-    #ingest_all_launches(conn)
+    ingest_all_launches(conn)
 
     # Use this for scheduled incremental ingestion
-    ingest_latest_launch(conn)
+    #ingest_latest_launch(conn)
 
     conn.close()
 
