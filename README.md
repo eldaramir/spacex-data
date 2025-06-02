@@ -16,13 +16,16 @@ Setup Instructions
 1. Clone the Repository
 
 git clone https://github.com/eldaramir/spacex-data.git
+
 cd spacex-data
 
 2. Start Services with Docker Compose
+
 cd docker 
 docker-compose -f docker/docker-compose.yml up -d
 
 3. Create Tables 
+
 cd sql 
 I used DBeaver from the task description I created the tables in pg sql syntax
 or run the SQL in sql/create_tables.sql to create the launches_raw and launches_agg tables.
@@ -33,6 +36,7 @@ source .venv/bin/activate   # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
 Running the Pipeline
+
 cd src
 1. python src/ingest_latest_launches.py
 
