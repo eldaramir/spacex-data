@@ -24,7 +24,8 @@ docker-compose -f docker/docker-compose.yml up -d
 
 3. Create Tables 
 cd sql 
-I used DBeaver or run the SQL in sql/create_tables.sql to create the launches_raw and launches_agg tables.
+I used DBeaver from the task description I created the tables in pg sql syntax
+or run the SQL in sql/create_tables.sql to create the launches_raw and launches_agg tables.
 
 4. Set up Python Virtual Environment
 python -m venv .venv
